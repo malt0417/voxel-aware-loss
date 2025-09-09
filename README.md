@@ -12,13 +12,11 @@ Resolution-aware L1 + gradient loss for 3D PyTorch volumes. Supports uniform spa
 ## Installation
 
 ```bash
-pip install git+https://github.com/yourname/weighted-l1-loss.git
-```
+# From source (in this repository root)
+python -m pip install .
 
-Or clone and install locally:
-
-```bash
-pip install -e .[dev]
+# Editable install with dev extras
+python -m pip install -e .[dev]
 ```
 
 ## Quick Start
