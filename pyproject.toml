@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weighted-l1-loss"
+version = "0.1.0"
+description = "3D resolution-aware Weighted L1 + gradient loss for PyTorch"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+keywords = ["pytorch", "loss", "deep-learning", "medical-imaging", "voxel", "3d"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "torch>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourname/weighted-l1-loss"
+Repository = "https://github.com/yourname/weighted-l1-loss"
+Issues = "https://github.com/yourname/weighted-l1-loss/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.3",
+  "pytest-cov>=4.1",
+  "ruff>=0.4.0",
+  "black>=24.3.0",
+  "pre-commit>=3.6.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
